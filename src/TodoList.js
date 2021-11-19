@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoListItem from './TodoListItem';
 
 // Above the App() function, create an empty Array and store it in a variable named todoList
 //const todoList = [];
@@ -29,7 +30,7 @@ function TodoList() {
     return (
           <ul>
               {todoList.map( (item) => (
-                      <li key={item.id}>{item.title}</li>
+                      <TodoListItem key={item.id} todo={item} />
                   )
               )}
           </ul>
